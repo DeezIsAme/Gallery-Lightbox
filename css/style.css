@@ -78,6 +78,7 @@ body {
   background-color: white;
   margin: 30px auto;
   padding: 20px;
+  justify-content: space-around;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   animation: titleSpawn 1s ease;
@@ -102,6 +103,7 @@ body {
 }
 
 .gallery li a {
+  text-decoration: none;
   width: 120px;
   height: 120px;
 }
@@ -112,20 +114,23 @@ body {
 }
 
 .overlay {
+  display: flex;
   width: 0;
   height: 0;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0);
   z-index: 9999;
   transition: 0.7;
-  text-align: center;
   padding: 100px 0;
 }
 
 .overlay:target {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   width: auto;
   height: auto;
   bottom: 0;
@@ -134,10 +139,11 @@ body {
 }
 
 .overlay .close {
+  display: flex;
+  justify-content: center;
   position: absolute;
-  top: 55px;
-  left: 50%;
-  margin-left: 103px;
+  top: 8%;
+  left: 57%;
   color: white;
   text-decoration: none;
   background-color: black;
@@ -176,42 +182,72 @@ body {
   position: absolute;
   text-indent: -9999px;
   top: 45%;
-  margin-left: 50px;
+  margin-left: 35%;
   opacity: 0;
 }
 
 .prev {
   transform: rotate(180deg);
-  margin-left: -110px;
+  margin-left: -35%;
 }
 
 /* Media Queries */
-@media (max-width: 1366px) {
+@media screen and (max-width: 1366px) {
   html {
     font-size: 75%;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
+
+  .overlay .close {
+    left: 65%;
+  }
+
+  .next {
+    margin-left: 68%;
+  }
+
+  .prev {
+    margin-left: -68%;
+  }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   html {
     font-size: 55%;
   }
 
   .title a {
-    font-size: 50px;
-  }
-
-  .container {
-    width: 300px;
+    font-size: 75%;
   }
 
   .overlay img {
+    max-height: 70%;
+  }
+
+  .container {
+    width: 70%;
+  }
+
+  .overlay .close {
+    left: 70%;
+  }
+
+  .prev {
+    transform: rotate(180deg) scale(0.6);
+    margin-left: -90%;
+  }
+
+  .next {
+    transform: scale(0.6);
+    margin-left: 90%;
+  }
+
+  /* .overlay img {
     transform: scale(0.8);
     margin: 80px auto;
   }
@@ -234,5 +270,5 @@ body {
   .overlay .close {
     top: 180px;
     margin-left: 90px;
-  }
+  } */
 }
