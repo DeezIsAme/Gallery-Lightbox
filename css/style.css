@@ -118,7 +118,7 @@ body {
   width: 0;
   height: 0;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0);
@@ -130,7 +130,7 @@ body {
 .overlay:target {
   justify-content: center;
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   width: auto;
   height: auto;
   bottom: 0;
