@@ -131,7 +131,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: fixed; */
+  position: fixed;
   width: auto;
   height: auto;
   bottom: 0;
@@ -235,7 +235,7 @@ body {
   }
 
   .overlay .close {
-    top: 15%;
+    top: 21%;
     left: 70%;
   }
 
