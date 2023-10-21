@@ -74,7 +74,7 @@ body {
 
 .container {
   display: flex;
-  max-width: 550px;
+  max-width: 650px;
   background-color: white;
   margin: 30px auto;
   padding: 20px;
@@ -93,7 +93,7 @@ body {
 .gallery li {
   display: flex;
   border: 5px solid #a4a5a5;
-  margin: 10px;
+  margin: 20px;
   transition: 0.2s;
   box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.6);
 }
@@ -131,8 +131,8 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: auto;
-  height: auto;
+  width: 100vw;
+  height: 100vw;
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
@@ -222,29 +222,30 @@ body {
   }
 
   .title a {
-    font-size: 75%;
-  }
-
-  .overlay img {
-    max-height: 70%;
+    font-size: 60%;
   }
 
   .container {
     width: 70%;
   }
 
+  .overlay img {
+    max-height: 65%;
+  }
+
   .overlay .close {
+    top: 15%;
     left: 70%;
   }
 
   .prev {
     transform: rotate(180deg) scale(0.6);
-    margin-left: -90%;
+    margin-left: -88%;
   }
 
   .next {
     transform: scale(0.6);
-    margin-left: 90%;
+    margin-left: 88%;
   }
 
   /* .overlay img {
